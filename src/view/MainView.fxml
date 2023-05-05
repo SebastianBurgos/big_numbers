@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="706.0" maxWidth="1300.0" minHeight="680.0" minWidth="1300.0" prefHeight="706.0" prefWidth="1300.0" style="-fx-max-height: 100%; -fx-max-width: 100%; -fx-background-color: #475454;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <TabPane layoutX="5.0" layoutY="69.0" prefHeight="621.0" prefWidth="1289.0" style="-fx-background-color: #7F9898;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="69.0">
+        <tabs>
+          <Tab style="-fx-background-color: #357B8E; -fx-font-size: 16;" text="Análisis de Tiempos de Ejecución">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="627.0" prefWidth="1264.0">
+                     <children>
+                        <SplitPane dividerPositions="0.9946524064171123" layoutX="6.0" layoutY="8.0" orientation="VERTICAL" prefHeight="565.0" prefWidth="1273.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="8.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <GridPane alignment="CENTER" gridLinesVisible="true" layoutX="34.0" layoutY="55.0" prefHeight="406.0" prefWidth="303.0" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="34.0" AnchorPane.topAnchor="55.0">
+                                      <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="389.0" minWidth="10.0" prefWidth="80.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="575.0" minWidth="10.0" prefWidth="272.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints maxHeight="27.333328247070312" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="50.333343505859375" minHeight="0.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="92.0" minHeight="0.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="108.0" minHeight="0.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="112.0" minHeight="0.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="111.0" minHeight="0.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="114.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="110.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="106.0" minHeight="0.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="102.0" minHeight="0.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="94.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="95.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="89.0" minHeight="0.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="94.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="88.0" minHeight="0.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="93.0" minHeight="9.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="87.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="25.0" prefWidth="201.0" style="-fx-background-color: GRAY;" text="NUM" textAlignment="CENTER" underline="true">
+                                             <font>
+                                                <Font name="Bodoni MT" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="25.0" prefWidth="570.0" style="-fx-background-color: GRAY;" text="NOMBRE DEL ALGORITMO" textAlignment="CENTER" underline="true" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="Bodoni MT" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="124.0" text="1" GridPane.rowIndex="1" />
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="124.0" text="2" GridPane.rowIndex="2" />
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="124.0" text="3" GridPane.rowIndex="3" />
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="124.0" text="4" GridPane.rowIndex="4" />
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="124.0" text="12" GridPane.rowIndex="12" />
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="124.0" text="11" GridPane.rowIndex="11" />
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="124.0" text="10" GridPane.rowIndex="10" />
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="124.0" text="9" GridPane.rowIndex="9" />
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="124.0" text="8" GridPane.rowIndex="8" />
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="124.0" text="7" GridPane.rowIndex="7" />
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="124.0" text="6" GridPane.rowIndex="6" />
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="124.0" text="5" GridPane.rowIndex="5" />
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="124.0" text="13" GridPane.rowIndex="13" />
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="124.0" text="14" GridPane.rowIndex="14" />
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="124.0" text="16" GridPane.rowIndex="16" />
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="124.0" text="15" GridPane.rowIndex="15" />
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="466.0" text="NaivStandard" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="466.0" text="NaivOnArray" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="466.0" text="NaivKhan" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="466.0" text="NaivLoopUnrollingTwo" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="466.0" text="v4ParallelBlock" GridPane.columnIndex="1" GridPane.rowIndex="16">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="466.0" text="v3SequentialBlock" GridPane.columnIndex="1" GridPane.rowIndex="15">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="466.0" text="iv4ParallelBlock" GridPane.columnIndex="1" GridPane.rowIndex="14">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="466.0" text="iv3SequentialBlock" GridPane.columnIndex="1" GridPane.rowIndex="13">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="466.0" text="iii4ParallelBlock" GridPane.columnIndex="1" GridPane.rowIndex="12">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="466.0" text="iii3SequentialBlock" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="466.0" text="StrassenWinograd" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="466.0" text="StrassenNaiv" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="466.0" text="WinogradScaled" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="466.0" text="WinogradOriginal" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="466.0" text="NaivLoopUnrollingFour" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" prefHeight="17.0" prefWidth="466.0" text="NaivLoopUnrollingThree" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </GridPane>
+                                    <TableView fx:id="tableTiemposEjecucion" layoutX="395.0" layoutY="24.0" prefHeight="505.0" prefWidth="870.0" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="395.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="24.0">
+                                      <columns>
+                                        <TableColumn fx:id="col1" prefWidth="113.0" text="1">
+                                             <columns>
+                                                <TableColumn fx:id="colN1" prefWidth="75.0" text="N" />
+                                                <TableColumn fx:id="colTE1" prefWidth="75.0" text="TE (nanoseg)" />
+                                             </columns></TableColumn>
+                                          <TableColumn fx:id="col2" prefWidth="113.0" text="2">
+                                             <columns>
+                                                <TableColumn fx:id="colN2" prefWidth="75.0" text="N" />
+                                                <TableColumn fx:id="colTE2" prefWidth="75.0" text="TE (nanoseg)" />
+                                             </columns>
+                                          </TableColumn>
+                                          <TableColumn fx:id="col3" prefWidth="113.0" text="3">
+                                             <columns>
+                                                <TableColumn fx:id="colN3" prefWidth="75.0" text="N" />
+                                                <TableColumn fx:id="colTE3" prefWidth="75.0" text="TE (nanoseg)" />
+                                             </columns>
+                                          </TableColumn>
+                                          <TableColumn fx:id="col4" prefWidth="113.0" text="4">
+                                             <columns>
+                                                <TableColumn fx:id="colN4" prefWidth="75.0" text="N" />
+                                                <TableColumn fx:id="colTE4" prefWidth="75.0" text="TE (nanoseg)" />
+                                             </columns>
+                                          </TableColumn>
+                                          <TableColumn fx:id="col5" prefWidth="113.0" text="5">
+                                             <columns>
+                                                <TableColumn fx:id="colN5" prefWidth="75.0" text="N" />
+                                                <TableColumn fx:id="colTE5" prefWidth="75.0" text="TE (nanoseg)" />
+                                             </columns>
+                                          </TableColumn>
+                                          <TableColumn fx:id="col6" prefWidth="113.0" text="6">
+                                             <columns>
+                                                <TableColumn fx:id="colN6" prefWidth="75.0" text="N" />
+                                                <TableColumn fx:id="colTE6" prefWidth="75.0" text="TE (nanoseg)" />
+                                             </columns>
+                                          </TableColumn>
+                                          <TableColumn fx:id="col7" prefWidth="113.0" text="7">
+                                             <columns>
+                                                <TableColumn fx:id="colN7" prefWidth="75.0" text="N" />
+                                                <TableColumn fx:id="colTE7" prefWidth="75.0" text="TE (nanoseg)" />
+                                             </columns>
+                                          </TableColumn>
+                                          <TableColumn fx:id="col8" prefWidth="113.0" text="8">
+                                             <columns>
+                                                <TableColumn fx:id="colN8" prefWidth="75.0" text="N" />
+                                                <TableColumn fx:id="colTE8" prefWidth="75.0" text="TE (nanoseg)" />
+                                             </columns>
+                                          </TableColumn>
+                                          <TableColumn fx:id="col9" prefWidth="113.0" text="9">
+                                             <columns>
+                                                <TableColumn fx:id="colN9" prefWidth="75.0" text="N" />
+                                                <TableColumn fx:id="colTE9" prefWidth="75.0" text="TE (nanoseg)" />
+                                             </columns>
+                                          </TableColumn>
+                                          <TableColumn fx:id="col10" prefWidth="113.0" text="10">
+                                             <columns>
+                                                <TableColumn fx:id="colN10" prefWidth="75.0" text="N" />
+                                                <TableColumn fx:id="colTE10" prefWidth="75.0" text="TE (nanoseg)" />
+                                             </columns>
+                                          </TableColumn>
+                                          <TableColumn fx:id="col11" prefWidth="113.0" text="11">
+                                             <columns>
+                                                <TableColumn fx:id="colN11" prefWidth="75.0" text="N" />
+                                                <TableColumn fx:id="colTE11" prefWidth="75.0" text="TE (nanoseg)" />
+                                             </columns>
+                                          </TableColumn>
+                                          <TableColumn fx:id="col12" prefWidth="113.0" text="12">
+                                             <columns>
+                                                <TableColumn fx:id="colN12" prefWidth="75.0" text="N" />
+                                                <TableColumn fx:id="colTE12" prefWidth="75.0" text="TE (nanoseg)" />
+                                             </columns>
+                                          </TableColumn>
+                                      </columns>
+                                    </TableView>
+                                    <Button layoutX="32.0" layoutY="4.0" mnemonicParsing="false" onAction="#ejecutarAlgoritmos" prefHeight="41.0" prefWidth="305.0" text="Ejecutar">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Button>
+                                    <Label layoutX="353.0" layoutY="79.0" prefHeight="17.0" prefWidth="38.0" text="1 ---&gt;" />
+                                    <Label layoutX="353.0" layoutY="101.0" prefHeight="17.0" prefWidth="38.0" text="2 ---&gt;" />
+                                    <Label layoutX="353.0" layoutY="124.0" prefHeight="17.0" prefWidth="38.0" text="3 ---&gt;" />
+                                    <Label layoutX="353.0" layoutY="147.0" prefHeight="17.0" prefWidth="38.0" text="4 ---&gt;" />
+                                    <Label layoutX="353.0" layoutY="170.0" prefHeight="17.0" prefWidth="38.0" text="5 ---&gt;" />
+                                    <Label layoutX="353.0" layoutY="295.0" prefHeight="17.0" prefWidth="38.0" text="10 --&gt;" />
+                                    <Label layoutX="353.0" layoutY="270.0" prefHeight="17.0" prefWidth="38.0" text="9 ---&gt;" />
+                                    <Label layoutX="353.0" layoutY="245.0" prefHeight="17.0" prefWidth="38.0" text="8 ---&gt;" />
+                                    <Label layoutX="353.0" layoutY="220.0" prefHeight="17.0" prefWidth="38.0" text="7 ---&gt;" />
+                                    <Label layoutX="353.0" layoutY="195.0" prefHeight="17.0" prefWidth="38.0" text="6 ---&gt;" />
+                                    <Label layoutX="353.0" layoutY="318.0" prefHeight="17.0" prefWidth="38.0" text="11 --&gt;" />
+                                    <Label layoutX="353.0" layoutY="340.0" prefHeight="17.0" prefWidth="38.0" text="12 --&gt;" />
+                                    <Label layoutX="353.0" layoutY="363.0" prefHeight="17.0" prefWidth="38.0" text="13 --&gt;" />
+                                    <Label layoutX="353.0" layoutY="386.0" prefHeight="17.0" prefWidth="38.0" text="14 --&gt;" />
+                                    <Label layoutX="353.0" layoutY="409.0" prefHeight="17.0" prefWidth="38.0" text="15 --&gt;" />
+                                    <Label layoutX="353.0" layoutY="433.0" prefHeight="17.0" prefWidth="38.0" text="16 --&gt;" />
+                                 </children></AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab style="-fx-background-color: #357B8E; -fx-font-size: 16;" text="Gráficos y Medidas Estadísticas">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="604.0" prefWidth="1289.0">
+                     <children>
+                        <SplitPane dividerPositions="0.3875" layoutX="6.0" layoutY="8.0" orientation="VERTICAL" prefHeight="564.0" prefWidth="1275.0" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TableView fx:id="tableEstadisticas" layoutX="23.0" layoutY="14.0" prefHeight="183.0" prefWidth="796.0" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="454.0" AnchorPane.topAnchor="14.0">
+                                      <columns>
+                                        <TableColumn fx:id="tEstadisticascolNombreAlgoritmo" prefWidth="146.0" text="Nombre Algoritmo" />
+                                        <TableColumn fx:id="tEstadisticascolNumeroAlgoritmo" prefWidth="153.0" text="Número del Algoritmo" />
+                                          <TableColumn fx:id="tEstadisticascolPromedio" prefWidth="109.0" text="Media (ns)" />
+                                          <TableColumn fx:id="tEstadisticascolRango" prefWidth="120.0" text="Rango (ns)" />
+                                          <TableColumn fx:id="tEstadisticascolDesvEstandar" prefWidth="151.0" text="Desviacion Estandar" />
+                                          <TableColumn fx:id="tEstadisticascolVarianza" prefWidth="115.0" text="Varianza" />
+                                      </columns>
+                                    </TableView>
+                                    <BorderPane layoutX="830.0" layoutY="6.0" prefHeight="200.0" prefWidth="433.0" AnchorPane.bottomAnchor="13.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="6.0">
+                                       <center>
+                                          <LineChart fx:id="lineChart" title="Puntos TE de Algoritmo Seleccionado vs &#10;Tamaño n de Matriz" BorderPane.alignment="CENTER">
+                                            <xAxis>
+                                              <CategoryAxis label="Tamaño n de matriz nxn" side="BOTTOM" fx:id="xAxisLineChart" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis label="TE (ns)" side="LEFT" />
+                                            </yAxis>
+                                          </LineChart>
+                                       </center>
+                                    </BorderPane>
+                                 </children></AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <Button layoutX="73.0" layoutY="21.0" mnemonicParsing="false" onAction="#graficarPromedios" prefHeight="41.0" prefWidth="336.0" style="-fx-background-color: #358E8E;" text="Graficar Promedios TE vs Algoritmos" textFill="WHITE" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="864.0" AnchorPane.topAnchor="21.0">
+                                       <font>
+                                          <Font name="System Bold Italic" size="17.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="817.0" layoutY="21.0" mnemonicParsing="false" onAction="#graficarOrdenCreciente" prefHeight="41.0" prefWidth="362.0" style="-fx-background-color: #358E8E;" text="Graficar Promedios Orden Creciente" textFill="WHITE" AnchorPane.leftAnchor="817.0" AnchorPane.rightAnchor="94.0" AnchorPane.topAnchor="21.0">
+                                       <font>
+                                          <Font name="System Bold Italic" size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <BorderPane fx:id="panelGraficaBarrasPromedio" layoutX="46.0" layoutY="82.0" prefHeight="238.0" prefWidth="551.0" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="46.0">
+                                       <center>
+                                          <BarChart fx:id="barChartPromedios" legendVisible="false" title="Promedios TE vs Num Algoritmo" BorderPane.alignment="CENTER">
+                                            <xAxis>
+                                              <CategoryAxis label="Numero de Algoritmo" side="BOTTOM" fx:id="xAxisPromedios" />
+                                            </xAxis>
+                                            <yAxis>
+                                              <NumberAxis label="Promedios (ns)" side="LEFT" />
+                                            </yAxis>
+                                          </BarChart>
+                                       </center>
+                                    </BorderPane>
+                                    <BorderPane fx:id="panelGraficaBarrasPromedio1" layoutX="674.0" layoutY="71.0" prefHeight="238.0" prefWidth="575.0" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="24.0">
+                                       <center>
+                                          <BarChart fx:id="barChartPromediosOrdenados" legendVisible="false" title="Promedios TE  Odenados vs Num Algoritmo Ordenados" BorderPane.alignment="CENTER">
+                                             <xAxis>
+                                                <CategoryAxis label="Numero de Algoritmo (Ordenado de menor a mayor)" side="BOTTOM" fx:id="xAxisPromediosOrdenados" />
+                                             </xAxis>
+                                             <yAxis>
+                                                <NumberAxis label="Promedios (ns)" side="LEFT" />
+                                             </yAxis>
+                                          </BarChart>
+                                       </center>
+                                    </BorderPane>
+                                 </children></AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab style="-fx-background-color: #357B8E; -fx-font-size: 16;" text="Información de la Aplicación">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.7247386759581882" layoutX="10.0" layoutY="8.0" orientation="VERTICAL" prefHeight="562.0" prefWidth="1270.0" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TabPane layoutX="14.0" layoutY="14.0" prefHeight="541.0" prefWidth="1247.0" tabClosingPolicy="UNAVAILABLE">
+                                      <tabs>
+                                        <Tab style="-fx-background-color: #7DF0B3;" text="Naive Standard">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="447.0" prefWidth="1247.0">
+                                                   <children>
+                                                      <Label layoutX="14.0" layoutY="14.0" text="Primero, debes tener dos matrices, A y B, que deseas multiplicar: A =" />
+                                                      <Label layoutX="386.0" layoutY="14.0" text="| a11 | a12 | a13 |" />
+                                                      <Label layoutX="386.0" layoutY="30.0" text="| a21 | a22 | a23 |" />
+                                                      <Label layoutX="386.0" layoutY="48.0" text="| a31 | a32 | a33 |" />
+                                                      <Label layoutX="495.0" layoutY="14.0" text="B =" />
+                                                      <Label layoutX="525.0" layoutY="14.0" text="| b11 | b12 | b13 |" />
+                                                      <Label layoutX="525.0" layoutY="30.0" text="| b21 | b22 | b23 |" />
+                                                      <Label layoutX="525.0" layoutY="48.0" text="| b31 | b32 | b33 |" />
+                                                      <Label layoutX="634.0" layoutY="14.0" text="Para multiplicar estas matrices, sigues los siguientes pasos:" />
+                                                      <Label layoutX="16.0" layoutY="77.0" prefHeight="102.0" prefWidth="1215.0" text="Primero, toma la primera fila de la matriz A y la primera columna de la matriz B.&#10;Multiplica cada elemento de la fila por su correspondiente elemento en la columna y súmalos. Este valor se convierte en el primer elemento de la nueva matriz resultante, C.&#10;Repite el paso 2 para el segundo elemento de la primera fila de A y todos los elementos de la segunda columna de B. Este valor se convierte en el segundo elemento de la primera fila de C.&#10;Continúa este proceso para cada elemento de la primera fila de A y todas las columnas de B.&#10;Repite los pasos 2 a 4 para cada fila de A y cada columna de B. Cada vez que completes este proceso para una fila de A y una columna de B, tendrás una fila completa de la matriz C.&#10;Después de completar todos los pasos, la matriz resultante, C, tendrá el siguiente aspecto:" />
+                                                      <Label layoutX="46.0" layoutY="225.0" text="| c31 | c32 | c33 |" />
+                                                      <Label layoutX="46.0" layoutY="207.0" text="| c21 | c22 | c23 |" />
+                                                      <Label layoutX="46.0" layoutY="191.0" text="| c11 | c12 | c13 |" />
+                                                      <Label layoutX="16.0" layoutY="191.0" text="C =" />
+                                                      <Label layoutX="16.0" layoutY="252.0" text="Donde cada elemento cij se obtiene al multiplicar la fila i de A por la columna j de B y sumar los resultados." />
+                                                   </children></AnchorPane>
+                                          </content>
+                                        </Tab>
+                                        <Tab style="-fx-background-color: #D589F0;" text="NaiveArray">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label layoutX="14.0" layoutY="14.0" text="El método Naive on Array es similar al método Naive Standard, pero utiliza arreglos unidimensionales para representar las matrices. De esta forma, se optimiza el acceso a la memoria y se reduce el tiempo de procesamiento." />
+                                                      <Label layoutX="20.0" layoutY="40.0" />
+                                                      <Label layoutX="14.0" layoutY="40.0" text="A =" />
+                                                      <Label layoutX="42.0" layoutY="40.0" text="| a11 | a12 |" />
+                                                      <Label layoutX="42.0" layoutY="65.0" text="| a21 | a22 |" />
+                                                      <Label layoutX="129.0" layoutY="40.0" text="B =" />
+                                                      <Label layoutX="156.0" layoutY="40.0" text="| b11 | b12 |" />
+                                                      <Label layoutX="156.0" layoutY="65.0" text="| b21 | b22 |" />
+                                                      <Label layoutX="248.0" layoutY="40.0" text="A continuación, se crea una matriz resultante, C, con el mismo número de filas que la matriz A y el mismo número de columnas que la matriz B." />
+                                                      <Label layoutX="248.0" layoutY="65.0" text="Para hacer esto, se crea un arreglo unidimensional C con el tamaño igual al número de filas de A multiplicado por el número de columnas de B. En el caso de esta matriz, &#10;C tendría cuatro elementos." />
+                                                      <Label layoutX="10.0" layoutY="111.0" text="Luego, se realiza el siguiente cálculo para cada elemento de la matriz resultante C:" />
+                                                      <Label layoutX="456.0" layoutY="111.0" text="Cij = ∑(k=1, n) Aik*Bkj" />
+                                                      <Label layoutX="10.0" layoutY="143.0" text="Donde i representa la fila, j representa la columna, y n representa el número de columnas en la matriz A y el número de filas en la matriz B." />
+                                                   </children></AnchorPane>
+                                          </content>
+                                        </Tab>
+                                          <Tab style="-fx-background-color: #7DF0B3;" text="NaiveKahan">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label layoutX="14.0" layoutY="14.0" text="El método Naive Kahan es una variante del método Naive Standard que utiliza una técnica de compensación para reducir la propagación&#10;del error de redondeo en los cálculos de punto flotante. Esta técnica se conoce como compensación de Kahan." />
+                                                      <Label layoutX="14.0" layoutY="57.0" text="Primero, debes tener dos matrices, A y B, que deseas multiplicar:" />
+                                                      <Label layoutX="14.0" layoutY="90.0" text="A = " />
+                                                      <Label layoutX="51.0" layoutY="90.0" text="| a11 | a12 | a13 |" />
+                                                      <Label layoutX="51.0" layoutY="107.0" text="| a21 | a22 | a23 |" />
+                                                      <Label layoutX="51.0" layoutY="124.0" text="| a31 | a32 | a33 |" />
+                                                      <Label layoutX="157.0" layoutY="90.0" text="B =" />
+                                                      <Label layoutX="191.0" layoutY="90.0" text="| b11 | b12 | b13 |&#10;| b21 | b22 | b23 |&#10;| b31 | b32 | b33 |&#10;" />
+                                                      <Label layoutX="12.0" layoutY="155.0" text="A continuación, se crea una matriz resultante, C, con el mismo número de filas que la matriz A y el mismo número de columnas que la matriz B.&#10;Para hacer esto, se crea una matriz C inicializada con ceros del mismo tamaño que la matriz resultante. En este caso, C tendría 3 filas y 3 columnas.&#10;Luego, se realiza el siguiente cálculo para cada elemento de la matriz resultante C:&#10;Cij = ∑(k=1, n) Aik*Bkj&#10;Donde i representa la fila, j representa la columna, y n representa el número de columnas en la matriz A y el número de filas en la matriz B.&#10;La técnica de compensación de Kahan se utiliza para reducir el error acumulativo en los cálculos de punto flotante. Para ello, se utiliza una variable auxiliar,&#10; conocida como variable de compensación, para rastrear y corregir el error acumulativo en cada suma.">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children></AnchorPane>
+                                            </content>
+                                          </Tab>
+                                          <Tab style="-fx-background-color: #D589F0;" text="Naive Loop Unrolling Two">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label layoutX="14.0" layoutY="14.0" text="El método Naive Loop Unrolling Two es una variante del método Naive Standard que utiliza la técnica de desenrollado de bucles para mejorar el rendimiento del algoritmo. En este caso, se desenrolla el bucle interior del cálculo de la suma en dos iteraciones.&#10;Primero, debes tener dos matrices, A y B, que deseas multiplicar:&#10;" />
+                                                      <Label layoutX="14.0" layoutY="59.0" text="A =&#10;| a11 | a12 | a13 |&#10;| a21 | a22 | a23 |&#10;| a31 | a32 | a33 |" />
+                                                      <Label layoutX="143.0" layoutY="59.0" text="B =&#10;| b11 | b12 | b13 |&#10;| b21 | b22 | b23 |&#10;| b31 | b32 | b33 |" />
+                                                      <Label layoutX="14.0" layoutY="141.0" text="A continuación, se crea una matriz resultante, C, con el mismo número de filas que la matriz A y el mismo número de columnas que la matriz B.&#10;Para hacer esto, se crea una matriz C inicializada con ceros del mismo tamaño que la matriz resultante. En este caso, C tendría 3 filas y 3 columnas.&#10;Luego, se realiza el siguiente cálculo para cada elemento de la matriz resultante C utilizando el desenrollado de bucles de dos iteraciones:&#10;Cij = 0&#10;para k = 1 hasta n en pasos de 2&#10;Cij = Cij + Aik * Bkj + A(i, k+1) * B(k+1, j)&#10;Donde i representa la fila, j representa la columna, y n representa el número de columnas en la matriz A y el número de filas en la matriz B." />
+                                                   </children>
+                                                </AnchorPane>
+                                            </content>
+                                          </Tab>
+                                          <Tab style="-fx-background-color: #7DF0B3;" text="Naive Loop Unrolling Three">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label layoutX="14.0" layoutY="14.0" text="El método Naive Loop Unrolling Three es una variante del método Naive Standard que utiliza la técnica de desenrollado de bucles para mejorar el rendimiento del algoritmo. En este caso, se desenrolla el bucle interior del cálculo &#10;de la suma en tres iteraciones.&#10;Primero, debes tener dos matrices, A y B, que deseas multiplicar:" />
+                                                      <Label layoutX="14.0" layoutY="71.0" text="A =&#10;| a11 | a12 | a13 |&#10;| a21 | a22 | a23 |&#10;| a31 | a32 | a33 |&#10;" />
+                                                      <Label layoutX="139.0" layoutY="71.0" text="B =&#10;| b11 | b12 | b13 |&#10;| b21 | b22 | b23 |&#10;| b31 | b32 | b33 |&#10;" />
+                                                      <Label layoutX="14.0" layoutY="155.0" text="A continuación, se crea una matriz resultante, C, con el mismo número de filas que la matriz A y el mismo número de columnas que la matriz B.&#10;Para hacer esto, se crea una matriz C inicializada con ceros del mismo tamaño que la matriz resultante. En este caso, C tendría 3 filas y 3 columnas." />
+                                                      <Label layoutX="14.0" layoutY="197.0" text="Luego, se realiza el siguiente cálculo para cada elemento de la matriz resultante C utilizando el desenrollado de bucles de tres iteraciones:&#10;Cij = 0&#10;para k = 1 hasta n en pasos de 3&#10;Cij = Cij + Aik * Bkj + A(i, k+1) * B(k+1, j) + A(i, k+2) * B(k+2, j)&#10;Donde i representa la fila, j representa la columna, y n representa el número de columnas en la matriz A y el número de filas en la matriz B." />
+                                                   </children>
+                                                </AnchorPane>
+                                            </content>
+                                          </Tab>
+                                          <Tab style="-fx-background-color: #D589F0;" text="Naive Loop Unrolling Four">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label layoutX="14.0" layoutY="14.0" text="El método Naive Loop Unrolling Four es una variante del método Naive Standard que utiliza la técnica de desenrollado de bucles para mejorar el rendimiento del algoritmo.&#10; En este caso, se desenrolla el bucle interior del cálculo de la suma en cuatro iteraciones.&#10;Primero, debes tener dos matrices, A y B, que deseas multiplicar:" />
+                                                      <Label layoutX="14.0" layoutY="72.0" text="A =&#10;| a11 | a12 | a13 |&#10;| a21 | a22 | a23 |&#10;| a31 | a32 | a33 |&#10;" />
+                                                      <Label layoutX="137.0" layoutY="72.0" text="B =&#10;| b11 | b12 | b13 |&#10;| b21 | b22 | b23 |&#10;| b31 | b32 | b33 |&#10;" />
+                                                      <Label layoutX="14.0" layoutY="158.0" text="A continuación, se crea una matriz resultante, C, con el mismo número de filas que la matriz A y el mismo número de columnas que la matriz B.&#10;Para hacer esto, se crea una matriz C inicializada con ceros del mismo tamaño que la matriz resultante. En este caso, C tendría 3 filas y 3 columnas.&#10;Luego, se realiza el siguiente cálculo para cada elemento de la matriz resultante C utilizando el desenrollado de bucles de cuatro iteraciones:&#10;Cij = 0&#10;para k = 1 hasta n en pasos de 4&#10;Cij = Cij + Aik * Bkj + A(i, k+1) * B(k+1, j) + A(i, k+2) * B(k+2, j) + A(i, k+3) * B(k+3, j)&#10;Donde i representa la fila, j representa la columna, y n representa el número de columnas en la matriz A y el número de filas en la matriz B.&#10;" />
+                                                   </children>
+                                                </AnchorPane>
+                                            </content>
+                                          </Tab>
+                                          <Tab style="-fx-background-color: #7DF0B3;" text="Winograd Original">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label layoutX="14.0" layoutY="14.0" text="El método Winograd es una técnica avanzada de multiplicación de matrices que puede ser más rápida que el método Naive Standard en algunos casos. El método original de Winograd se basa en la utilización de ciertas&#10; transformaciones lineales para reducir la cantidad de operaciones necesarias para la multiplicación de matrices.&#10;Primero, debes tener dos matrices, A y B, que deseas multiplicar:" />
+                                                      <Label layoutX="14.0" layoutY="79.0" text="A =&#10;| a11 | a12 | a13 | a14 |&#10;| a21 | a22 | a23 | a24 |&#10;| a31 | a32 | a33 | a34 |&#10;| a41 | a42 | a43 | a44 |&#10;" />
+                                                      <Label layoutX="154.0" layoutY="79.0" text="B =&#10;| b11 | b12 | b13 | b14 |&#10;| b21 | b22 | b23 | b24 |&#10;| b31 | b32 | b33 | b34 |&#10;| b41 | b42 | b43 | b44 |&#10;" />
+                                                      <Label layoutX="14.0" layoutY="184.0" text="A continuación, se crea una matriz resultante, C, con el mismo número de filas que la matriz A y el mismo número de columnas que la matriz B.&#10;Para hacer esto, se crea una matriz C inicializada con ceros del mismo tamaño que la matriz resultante. En este caso, C tendría 4 filas y 4 columnas.&#10;Luego, se realiza los siguientes pasos para la multiplicación de matrices utilizando el método Winograd Original:&#10;Se realiza la transformación de A y B:&#10;Para la matriz A, se realizan dos transformaciones lineales, una para cada fila. Cada transformación lineal genera un polinomio de grado 2.&#10;Para la matriz B, se realizan dos transformaciones lineales, una para cada columna. Cada transformación lineal genera un polinomio de grado 2.&#10;Se realizan los productos de los polinomios generados por la transformación de A y B para obtener cuatro matrices intermedias:&#10;M1 = p1q1 + p2q3 + p3q5 + p4q7&#10;M2 = p1q2 + p2q4 + p3q6 + p4q8&#10;M3 = p1q3 + p2q5 + p3q7 + p4q9&#10;M4 = p1q4 + p2q6 + p3q8 + p4q10&#10;" />
+                                                      <Label layoutX="230.0" layoutY="330.0" text="Se realiza una tercera transformación lineal en las matrices intermedias para obtener la matriz resultante C:&#10;" />
+                                                      <Label layoutX="230.0" layoutY="347.0" text="C =&#10;| m1 - m3 - m4 | m3 - m2 - m4 | m2 - m3 + m4 | m4 |&#10;| m2 + m3 | m1 + m2 - m3 | m2 + m3 | m4 |&#10;| m3 - m2 | m1 + m2 - m3 | m2 + m3 | m4 |&#10;| m1 - m2 + m3 | m2 + m3 | m2 - m1 + m3 | m4 |&#10;Donde p1, p2, p3 y p4 son los polinomios generados por la transformación lineal de cada fila de la matriz A, q1, q2, q3 y q4 son los polinomios generados&#10; por la transformación lineal de cada columna de la matriz B, y m1, m2, m3 y m4&#10;" />
+                                                   </children>
+                                                </AnchorPane>
+                                            </content>
+                                          </Tab>
+                                          <Tab style="-fx-background-color: #D589F0;" text="Winograd Scaled">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label layoutX="14.0" layoutY="14.0" text="Es una técnica avanzada de multiplicación de matrices que es una mejora del método original de Winograd. El método utiliza una combinación de transformaciones lineales y escalado para reducir la&#10; cantidad de operaciones necesarias para la multiplicación de matrices.&#10;Primero, debes tener dos matrices, A y B, que deseas multiplicar:&#10;" />
+                                                      <Label layoutX="14.0" layoutY="74.0" text="A =&#10;| a11 | a12 | a13 | a14 |&#10;| a21 | a22 | a23 | a24 |&#10;| a31 | a32 | a33 | a34 |&#10;| a41 | a42 | a43 | a44 |&#10;" />
+                                                      <Label layoutX="165.0" layoutY="74.0" text="B =&#10;| b11 | b12 | b13 | b14 |&#10;| b21 | b22 | b23 | b24 |&#10;| b31 | b32 | b33 | b34 |&#10;| b41 | b42 | b43 | b44 |&#10;" />
+                                                      <Label layoutX="329.0" layoutY="74.0" text="A continuación, se crea una matriz resultante, C, con el mismo número de filas que la matriz A y el mismo número de columnas que la matriz B.&#10;Para hacer esto, se crea una matriz C inicializada con ceros del mismo tamaño que la matriz resultante. En este caso, C tendría 4 filas y 4 columnas.&#10;Luego, se realiza los siguientes pasos para la multiplicación de matrices utilizando el método Winograd Scaled:&#10;" />
+                                                      <Label layoutX="14.0" layoutY="183.0" text="Se calculan las siguientes constantes:&#10;r = 2&#10;r' = 1 / r&#10;d = (r + 1) / 2&#10;d' = 1 / d&#10;Se realiza la transformación de A y B:&#10;Para la matriz A, se realizan dos transformaciones lineales, una para cada fila. Cada transformación lineal genera un polinomio de grado 2.&#10;Para la matriz B, se realizan dos transformaciones lineales, una para cada columna. Cada transformación lineal genera un polinomio de grado 2.&#10;Se realizan los productos de los polinomios generados por la transformación de A y B para obtener cuatro matrices intermedias:&#10;" />
+                                                      <Label layoutX="815.0" layoutY="281.0" text="M1 = r'(p1q1 + p2q3 + p3q5 + p4q7)&#10;M2 = r'(p1q2 + p2q4 + p3q6 + p4q8)&#10;M3 = r'(p1q3 + p2q5 + p3q7 + p4q9)&#10;M4 = r'(p1q4 + p2q6 + p3q8 + p4q10)&#10;" />
+                                                      <Label layoutX="14.0" layoutY="349.0" text="Se realiza una tercera transformación lineal en las matrices intermedias para obtener la matriz resultante C:" />
+                                                      <Label layoutX="14.0" layoutY="375.0" text="C = d'&#10;| d(m1 - m3 - m4) | d(m3 - m2 - m4) | d(m2 - m3 + m4) | d(m4) |&#10;| d(m2 + m3) | d(m1 + m2 - m3) | d(m2 + m3) | d(m4) |&#10;| d(m3 - m2) | d(m1 + m2 - m3) | d(m2 + m3) | d(m4) |&#10;| d(m1 - m2 + m3) | d(m2 + m3) | d(m2 - m1 + m3) | d(m4&#10;" />
+                                                   </children>
+                                                </AnchorPane>
+                                            </content>
+                                          </Tab>
+                                          <Tab style="-fx-background-color: #7DF0B3;" text="Strassen Naiv">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label layoutX="14.0" layoutY="14.0" text="Es un algoritmo de multiplicación de matrices que utiliza la técnica de la división y conquista para reducir la cantidad de operaciones necesarias para la multiplicación de matrices. La idea es dividir las matrices en submatrices&#10; más pequeñas y aplicar recursivamente el algoritmo de Strassen Naiv a las submatrices.&#10;Primero, debes tener dos matrices, A y B, que deseas multiplicar:&#10;" />
+                                                      <Label layoutX="14.0" layoutY="73.0" text="A =&#10;| a11 | a12 | a13 | a14 |&#10;| a21 | a22 | a23 | a24 |&#10;| a31 | a32 | a33 | a34 |&#10;| a41 | a42 | a43 | a44 |&#10;" />
+                                                      <Label layoutX="163.0" layoutY="73.0" text="B =&#10;| b11 | b12 | b13 | b14 |&#10;| b21 | b22 | b23 | b24 |&#10;| b31 | b32 | b33 | b34 |&#10;| b41 | b42 | b43 | b44 |&#10;" />
+                                                      <Label layoutX="326.0" layoutY="73.0" text="A continuación, se crea una matriz resultante, C, con el mismo número de filas que la matriz A y el mismo número de columnas que la matriz B.&#10;Para hacer esto, se crea una matriz C inicializada con ceros del mismo tamaño que la matriz resultante. En este caso, C tendría 4 filas y 4 columnas.&#10;" />
+                                                      <Label layoutX="14.0" layoutY="172.0" text="Luego, se realiza los siguientes pasos para la multiplicación de matrices utilizando el método Strassen Naiv:&#10;Se verifica si las matrices A y B son matrices de 1x1 (matrices escalares). Si lo son, se multiplica directamente el valor en la posición correspondiente de A y B para obtener el valor en la posición correspondiente de C.&#10;Si las matrices A y B no son matrices de 1x1, se dividen cada matriz en cuatro submatrices de igual tamaño. Para hacer esto, se traza una línea vertical y una línea horizontal por la mitad de cada matriz, dividiéndolas en &#10;cuatro submatrices:&#10;" />
+                                                      <Label layoutX="14.0" layoutY="245.0" text="A =&#10;| A11 | A12 |&#10;| A21 | A22 |&#10;" />
+                                                      <Label layoutX="103.0" layoutY="245.0" text="B =&#10;| B11 | B12 |&#10;| B21 | B22 |&#10;" />
+                                                      <Label layoutX="196.0" layoutY="229.0" text="Se aplica el algoritmo de Strassen Naiv a cada una de las submatrices para calcular siete productos de matrices intermedias:" />
+                                                      <Label layoutX="196.0" layoutY="246.0" text="P1 = A11 x (B12 - B22)&#10;P2 = (A11 + A12) x B22&#10;P3 = (A21 + A22) x B11&#10;P4 = A22 x (B21 - B11)&#10;P5 = (A11 + A22) x (B11 + B22)&#10;P6 = (A12 - A22) x (B21 + B22)&#10;P7 = (A11 - A21) x (B11 + B12)&#10;" />
+                                                      <Label layoutX="414.0" layoutY="272.0" text="Se utiliza las matrices intermedias P1 a P7 para calcular las submatrices de la matriz resultante C:" />
+                                                      <Label layoutX="414.0" layoutY="297.0" text="C11 = P5 + P4 - P2 + P6&#10;C12 = P1 + P2&#10;C21 = P3 + P4&#10;C22 = P5 + P1 - P3 - P7&#10;" />
+                                                      <Label layoutX="14.0" layoutY="365.0" text="Se combinan las submatrices para obtener la matriz resultante C:&#10;" />
+                                                      <Label layoutX="14.0" layoutY="390.0" text="C =&#10;| C11 | C12 |&#10;| C21 | C22 |&#10;" />
+                                                   </children>
+                                                </AnchorPane>
+                                            </content>
+                                          </Tab>
+                                          <Tab style="-fx-background-color: #D589F0;" text="Strassen-Winograd">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label layoutX="14.0" layoutY="14.0" text="Supongamos que tenemos dos matrices A y B de tamaño 2x2 que queremos multiplicar:&#10;&#10;" />
+                                                      <Label layoutX="14.0" layoutY="48.0" text="A = | a11  a12 |&#10;       | a21  a22 |&#10;&#10;" />
+                                                      <Label layoutX="117.0" layoutY="57.0" text="B = | b11  b12 |&#10;       | b21  b22 |&#10;" />
+                                                      <Label layoutX="234.0" layoutY="57.0" text="Primero, dividimos cada matriz en cuatro bloques de tamaño 1x1, como se muestra a continuación:" />
+                                                      <Label layoutX="771.0" layoutY="57.0" text="A = | a11  | a12  |&#10;       |------|------|&#10;       | a21  | a22  |&#10;" />
+                                                      <Label layoutX="898.0" layoutY="57.0" text="B = | b11  | b12  |&#10;       |------|------|&#10;       | b21  | b22  |&#10;" />
+                                                      <Label layoutX="14.0" layoutY="108.0" text="Luego, calculamos siete productos de matrices utilizando estos bloques, y sumas y restas de ellos, como se muestra en la siguiente tabla:" />
+                                                      <Label layoutX="14.0" layoutY="137.0" text="M1 = (a11 + a22) * (b11 + b22)&#10;M2 = (a21 + a22) * b11&#10;M3 = a11 * (b12 - b22)&#10;M4 = a22 * (b21 - b11)&#10;M5 = (a11 + a12) * b22&#10;M6 = (a21 - a11) * (b11 + b12)&#10;M7 = (a12 - a22) * (b21 + b22)&#10;" />
+                                                      <Label layoutX="14.0" layoutY="272.0" text="Luego, podemos calcular los bloques de la matriz resultante C, utilizando las siguientes sumas y restas:" />
+                                                      <Label layoutX="14.0" layoutY="299.0" text="C11 = M1 + M4 - M5 + M7&#10;C12 = M3 + M5&#10;C21 = M2 + M4&#10;C22 = M1 - M2 + M3 + M6&#10;" />
+                                                      <Label layoutX="220.0" layoutY="299.0" text="Estos cálculos se pueden representar en la siguiente tabla:&#10;| M1 | M2 | M3 | M4 | M5 | M6 | M7 |&#10;|----|----|----|----|----|----|----|&#10;|    |    |    |    |    |    |    |&#10;|    |    |    |    |    |    |    |&#10;|    |    |    |    |    |    |    |&#10;|    |    |    |    |    |    |    |&#10;&#10;&#10;   | C11 | C12 |&#10;   |-----|-----|&#10;   | C21 | C22 |" />
+                                                      <Label layoutX="317.0" layoutY="453.0" text="Aquí, cada celda de la primera fila representa uno de los siete productos de matrices y sumas/restas que se calculan para obtener los bloques de la matriz resultante C. &#10;Las celdas debajo de la fila de los siete productos representan los bloques de la matriz resultante C." />
+                                                   </children>
+                                                </AnchorPane>
+                                            </content>
+                                          </Tab>
+                                          <Tab style="-fx-background-color: #7DF0B3;" text=" Sequential Block">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label layoutX="14.0" layoutY="14.0" text="El método de multiplicación de matrices por bloques secuenciales (Sequential block) es un algoritmo que divide las matrices de entrada en bloques más pequeños y los multiplica secuencialmente para obtener la matriz de salida.&#10; El siguiente esquema muestra cómo se multiplican dos matrices A y B de tamaño n x n usando bloques cuadrados de tamaño m x m:&#10;" />
+                                                      <Label layoutX="14.0" layoutY="62.0" text="Dividir las matrices de entrada A y B en bloques cuadrados de tamaño m x m.&#10;Inicializar la matriz de salida C de tamaño n x n con ceros.&#10;Iterar sobre los bloques de A y B secuencialmente y multiplicar cada par de bloques. Por ejemplo, el primer bloque de A se multiplica con el primer bloque de B, el segundo bloque de A con el segundo bloque de B, y así &#10;sucesivamente.&#10;Sumar el resultado de cada multiplicación de bloques a la matriz de salida C en la posición correspondiente. Por ejemplo, el resultado de la multiplicación del primer bloque de A con el primer bloque de B se suma en la &#10;esquina superior izquierda de C, el resultado de la multiplicación del segundo bloque de A con el segundo bloque de B se suma en la posición inmediatamente a la derecha, y así sucesivamente.&#10;Repetir el proceso para todos los bloques de A y B.&#10;Devolver la matriz de salida C.&#10;" />
+                                                      <Label layoutX="14.0" layoutY="208.0" text="A = [[a11, a12, a13, a14], &#10;B = [[b11, b12, b13, b14], &#10;&#10;[a21, a22, a23, a24],&#10; [b21, b22, b23, b24], &#10;[a31, a32, a33, a34],&#10; [b31, b32, b33, b34],&#10; [a41, a42, a43, a44]]&#10; [b41, b42, b43, b44]]&#10; m = 2 A en bloques: &#10;&#10;" />
+                                                      <Label layoutX="250.0" layoutY="208.0" text="B en bloques:&#10; [[a11, a12], [a21, a22]]&#10; [[b11, b12], [b21, b22]]&#10; [[a31, a32], [a41, a42]] &#10;[[b31, b32], [b41, b42]] &#10;C = [[0, 0, 0, 0], &#10;[0, 0, 0, 0],&#10; [0, 0, 0, 0],&#10; [0, 0, 0, 0]]&#10; Iteración 1:&#10;A1 = [[a11, a12], [a21, a22]] &#10;B1 = [[b11, b12], [b21, b22]] &#10;C1 = [[c11, c12], [c21, c22]] " />
+                                                      <Label layoutX="461.0" layoutY="208.0" text="Iteración 2:&#10; A2 = [[a31, a32],&#10; [a41, a42]] &#10;B2 = [[b31, b32], [b41, b42]]&#10; C2 = [[c33, c34], [c43, c44]]&#10; C final: &#10;[[c11, c12, c33, c34],&#10; [c21, c22, c43, c44],&#10; [0, 0, 0, 0],&#10; [0, 0, 0, 0]]&#10;" />
+                                                   </children>
+                                                </AnchorPane>
+                                            </content>
+                                          </Tab>
+                                          <Tab style="-fx-background-color: #D589F0;" text="Parallel Block">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Label layoutX="14.0" layoutY="14.0" text="El método de multiplicación de matrices llamado &quot;Parallel Block&quot; se basa en dividir las matrices en bloques más pequeños y realizar las operaciones de multiplicación en paralelo. Este método es útil para matrices grandes que no caben en la memoria caché de la CPU.&#10;El proceso de multiplicación de dos matrices A y B utilizando el método &quot;Parallel Block&quot; se puede explicar gráficamente de la siguiente manera:&#10;División en bloques: Se divide cada matriz A y B en bloques de tamaño n x n.&#10;Creación de bloques de resultado: Se crean bloques de tamaño n x n que contendrán el resultado final.&#10;Multiplicación de bloques: Se realizan las multiplicaciones de cada bloque individual de A con su bloque correspondiente de B en paralelo.&#10;Suma de bloques: Se suman los resultados de los bloques individuales para formar los bloques del resultado final.&#10;Combinación de bloques: Los bloques del resultado final se combinan para formar la matriz resultante C.&#10;" />
+                                                   </children>
+                                                </AnchorPane>
+                                            </content>
+                                          </Tab>
+                                      </tabs>
+                                    </TabPane>
+                                 </children></AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" SplitPane.resizableWithParent="false">
+                                 <children>
+                                    <Label layoutX="46.0" layoutY="13.0" prefHeight="125.0" prefWidth="373.0" text="Aplicación desarrollada por: &#10;          - Laura Dayana Ramos&#10;        - Olga Fernanda Castaño&#10;     - Sebastian Burgos Puentes&#10;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="854.0" AnchorPane.topAnchor="13.0">
+                                       <font>
+                                          <Font name="Cooper Black" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="498.0" layoutY="13.0" prefHeight="125.0" prefWidth="577.0" text="Estudiantes de Ingeniería de Sistemas y Computación&#10;Docente Sergio Augusto Cardona Torres&#10;Universidad del Quindío&#10;Armenia, Quindío&#10;Marzo del 2023&#10;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="498.0" AnchorPane.rightAnchor="198.0" AnchorPane.topAnchor="13.0">
+                                       <font>
+                                          <Font name="Cooper Black" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="136.0" fitWidth="144.0" layoutX="1115.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/logouq.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Pane layoutX="5.0" layoutY="4.0" prefHeight="59.0" prefWidth="1289.0" style="-fx-background-color: #358E8E;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="4.0">
+         <children>
+            <Label layoutX="54.0" layoutY="8.0" prefHeight="41.0" prefWidth="1215.0" text="PROYECTO 1 ANALISIS DE ALGORITMOS: ANÁLISIS DEL TIEMPO DE EJECUCIÓN PARA DIFERENTES ALGORITMOS DE MULTIPLICACIÓN DE MATRICES" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni MT" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
