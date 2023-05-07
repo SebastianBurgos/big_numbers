@@ -245,40 +245,40 @@ public class AlgoritmoView {
        */
 	private void asignar() {
 		try {
-			n1 = algoritmo.getTiemposEjecucionLst().get(0).getnTamañoMatriz();
+			n1 = algoritmo.getTiemposEjecucionLst().get(0).getnTamanioMatriz();
 			te1 = algoritmo.getTiemposEjecucionLst().get(0).getTiempoEjecucion();
 
-			n2 = algoritmo.getTiemposEjecucionLst().get(1).getnTamañoMatriz();
+			n2 = algoritmo.getTiemposEjecucionLst().get(1).getnTamanioMatriz();
 			te2 = algoritmo.getTiemposEjecucionLst().get(1).getTiempoEjecucion();
 
-			n3 = algoritmo.getTiemposEjecucionLst().get(2).getnTamañoMatriz();
+			n3 = algoritmo.getTiemposEjecucionLst().get(2).getnTamanioMatriz();
 			te3 = algoritmo.getTiemposEjecucionLst().get(2).getTiempoEjecucion();
 
-			n4 = algoritmo.getTiemposEjecucionLst().get(3).getnTamañoMatriz();
+			n4 = algoritmo.getTiemposEjecucionLst().get(3).getnTamanioMatriz();
 			te4 = algoritmo.getTiemposEjecucionLst().get(3).getTiempoEjecucion();
 
-			n5 = algoritmo.getTiemposEjecucionLst().get(4).getnTamañoMatriz();
+			n5 = algoritmo.getTiemposEjecucionLst().get(4).getnTamanioMatriz();
 			te5 = algoritmo.getTiemposEjecucionLst().get(4).getTiempoEjecucion();
 
-			n6 = algoritmo.getTiemposEjecucionLst().get(5).getnTamañoMatriz();
+			n6 = algoritmo.getTiemposEjecucionLst().get(5).getnTamanioMatriz();
 			te6 = algoritmo.getTiemposEjecucionLst().get(5).getTiempoEjecucion();
 
-			n7 = algoritmo.getTiemposEjecucionLst().get(6).getnTamañoMatriz();
+			n7 = algoritmo.getTiemposEjecucionLst().get(6).getnTamanioMatriz();
 			te7 = algoritmo.getTiemposEjecucionLst().get(6).getTiempoEjecucion();
 
-			n8 = algoritmo.getTiemposEjecucionLst().get(7).getnTamañoMatriz();
+			n8 = algoritmo.getTiemposEjecucionLst().get(7).getnTamanioMatriz();
 			te8 = algoritmo.getTiemposEjecucionLst().get(7).getTiempoEjecucion();
 
-			n9 = algoritmo.getTiemposEjecucionLst().get(8).getnTamañoMatriz();
+			n9 = algoritmo.getTiemposEjecucionLst().get(8).getnTamanioMatriz();
 			te9 = algoritmo.getTiemposEjecucionLst().get(8).getTiempoEjecucion();
 
-			n10 = algoritmo.getTiemposEjecucionLst().get(9).getnTamañoMatriz();
+			n10 = algoritmo.getTiemposEjecucionLst().get(9).getnTamanioMatriz();
 			te10 = algoritmo.getTiemposEjecucionLst().get(9).getTiempoEjecucion();
 
-			n11 = algoritmo.getTiemposEjecucionLst().get(10).getnTamañoMatriz();
+			n11 = algoritmo.getTiemposEjecucionLst().get(10).getnTamanioMatriz();
 			te11 = algoritmo.getTiemposEjecucionLst().get(10).getTiempoEjecucion();
 
-			n12 = algoritmo.getTiemposEjecucionLst().get(11).getnTamañoMatriz();
+			n12 = algoritmo.getTiemposEjecucionLst().get(11).getnTamanioMatriz();
 			te12 = algoritmo.getTiemposEjecucionLst().get(11).getTiempoEjecucion();
 
 		} catch (Exception e) {
