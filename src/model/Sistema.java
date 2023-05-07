@@ -3,6 +3,21 @@ package model;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
+import algoritmos.AmericanoIterativo;
+import algoritmos.AmericanoIterativoDinamico;
+import algoritmos.AmericanoRecursivo;
+import algoritmos.AmericanoRecursivoDinamico;
+import algoritmos.DivideVenceras1;
+import algoritmos.DivideVenceras2;
+import algoritmos.Egipcio;
+import algoritmos.Hindu;
+import algoritmos.InglesaIterativa;
+import algoritmos.InglesaIterativaDinamica;
+import algoritmos.InglesaRecursiva;
+import algoritmos.InglesaRecursivaDinamica;
+import algoritmos.Karatsuba;
+import algoritmos.MultiplicacionRepresentadaCadenas;
+import algoritmos.Ruso;
 import utilities.Archivos;
 import utilities.Metodos;
 
@@ -47,22 +62,21 @@ public class Sistema {
       * estos nombres y se irán invocando los métodos con estos nombres
       */
 	public void crearAlgoritmos() {
-		algoritmosLst.add(new Algoritmo(1, "NaivStandard"));
-		algoritmosLst.add(new Algoritmo(2, "NaivOnArray"));
-		algoritmosLst.add(new Algoritmo(3, "NaivKhan"));
-		algoritmosLst.add(new Algoritmo(4, "NaivLoopUnrollingTwo"));
-		algoritmosLst.add(new Algoritmo(5, "NaivLoopUnrollingThree"));
-		algoritmosLst.add(new Algoritmo(6, "NaivLoopUnrollingFour"));
-		algoritmosLst.add(new Algoritmo(7, "WinogradOriginal"));
-		algoritmosLst.add(new Algoritmo(8, "WinogradScaled"));
-		algoritmosLst.add(new Algoritmo(9, "StrassenNaiv"));
-		algoritmosLst.add(new Algoritmo(10, "StrassenWinograd"));
-		algoritmosLst.add(new Algoritmo(11, "III3SequentialBlock"));
-		algoritmosLst.add(new Algoritmo(12, "III4ParallelBlock"));
-		algoritmosLst.add(new Algoritmo(13, "IV3SequentialBlock"));
-		algoritmosLst.add(new Algoritmo(14, "IV4ParallelBlock"));
-		algoritmosLst.add(new Algoritmo(15, "V3SequentialBlock"));
-		algoritmosLst.add(new Algoritmo(16, "V4ParallelBlock"));
+		algoritmosLst.add(new Algoritmo(1, new AmericanoIterativo()));
+		algoritmosLst.add(new Algoritmo(2, new AmericanoIterativoDinamico()));
+		algoritmosLst.add(new Algoritmo(3, new AmericanoRecursivo()));
+		algoritmosLst.add(new Algoritmo(4, new AmericanoRecursivoDinamico()));
+		algoritmosLst.add(new Algoritmo(5, new InglesaIterativa()));
+		algoritmosLst.add(new Algoritmo(6, new InglesaIterativaDinamica()));
+		algoritmosLst.add(new Algoritmo(7, new InglesaRecursiva()));
+		algoritmosLst.add(new Algoritmo(8, new InglesaRecursivaDinamica()));
+		algoritmosLst.add(new Algoritmo(9, new Ruso()));
+		algoritmosLst.add(new Algoritmo(10, new Hindu()));
+		algoritmosLst.add(new Algoritmo(11, new Egipcio()));
+		algoritmosLst.add(new Algoritmo(12, new Karatsuba()));
+		algoritmosLst.add(new Algoritmo(13, new MultiplicacionRepresentadaCadenas()));
+		algoritmosLst.add(new Algoritmo(14, new DivideVenceras1()));
+		algoritmosLst.add(new Algoritmo(15, new DivideVenceras2()));
 	}
 
 	/**
@@ -73,57 +87,45 @@ public class Sistema {
 		//Para refrescar tabla con valores nuevos
 		refrescarValoresUsadosTabla(numeroAlgoritmo);
 
-		int nTamanioMatriz, numeroTE = 0;
+		int nDigitos, numeroTE = 0;
 		ArrayList<TiempoEjecucion> lstTEAux = new ArrayList<>();
 
-		/**CAMBIAR i<=n para cambiar la cantidad de matrices ejecutadas
-		 * Ojo: aquí solo se ejecuta hasta la matriz de tamaño 512x512
-		 * ya que las siguientes matrices se demoran bastante tiempo en
-		 * multiplicarse
+		/**CAMBIAR i<=n para cambiar la cantidad de archivos ejecutados
+		 * MAXIMO = i <= 10
 		 */
-		for (int i = 2; i <= 9; i++) {
-			nTamanioMatriz = (int)Math.pow(2, i);
-			String ruta = obtenerRuta(nTamanioMatriz);
-			int[][] matrizA = Archivos.leerArchivoMatriz(ruta);
-			int[][] matrizB = matrizA;
-			//Matriz resultado
-			int[][] matrizC = new int[nTamanioMatriz][nTamanioMatriz];
+		for (int i = 3; i <= 6; i++) {
+			nDigitos = (int)Math.pow(3, i);
+			String ruta = obtenerRuta(nDigitos);
+
+			//Numeros para realizar metodos estaticos
+			int[] numeroA = Archivos.leerArchivoPruebaArregloEstatico(ruta);
+			int[] numeroB = numeroA;
+
+			//Numeros apra realizar metodos dinamicos
+			ArrayList<Integer> numeroAdinamico = Archivos.leerArchivoPruebaArregloDinamico(ruta);
+			ArrayList<Integer> numeroBdinamico = numeroAdinamico;
+
 			//Datos necesarios para el calculo de los tiempos de ejecucion
 			Long tiempoInicio = (long) 0;
 			Long tiempoFinal = (long) 0;
 
-			//Obtenemos el nombre del metodo a usar segun el nombre del algoritmo
-			String nombreMetodo = algoritmosLst.get(numeroAlgoritmo).getNombre();
-			System.out.println(nombreMetodo);
-			//Se inicia una variable de tipo Method que servirá para invocar
-			//la función segun el nombre del algoritmo
-			Method metodo;
-			try {
-				//Se obtiene la variable de tipo Mhetod por medio del nombre y sus atributos con la
-				//funcion propia de java getMethod()
-				metodo = Metodos.class.getMethod(nombreMetodo, int[][].class, int[][].class, int[][].class, int.class, int.class, int.class);
+			//Justo acá se calcula sólo la invocación de cada método sin
+			//ningún proceso adicional lo que no afecta al rendimiento real
+	        tiempoInicio = System.nanoTime();
 
-				//Justo acá se calcula sólo la invocación de cada método sin
-				//ningún proceso adicional lo que no afecta al rendimiento real
-		        tiempoInicio = System.nanoTime();
-		        metodo.invoke(null, matrizA, matrizB, matrizC, nTamanioMatriz, nTamanioMatriz, nTamanioMatriz);
-		        tiempoFinal = System.nanoTime();
+	        tiempoFinal = System.nanoTime();
 
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 			//Se obtiene el te mediante la resta
 			Long tiempoEjecucion = tiempoFinal - tiempoInicio;
 
 			//Se crea la variable TiempoEjecucion para saber de que tamaño de matriz fue
 			//hallado ese te
-	        TiempoEjecucion te = new TiempoEjecucion(nTamanioMatriz, tiempoEjecucion);
+	        TiempoEjecucion te = new TiempoEjecucion(nDigitos, tiempoEjecucion);
 
 	        //Se agrega a la lista auxiliar, la cual al finalizar de agregar todos
 	        //Se insertara completa en el algoritmo indicado
 	        lstTEAux.add(numeroTE, te);
-			System.out.println("Multiplicacion "+nTamanioMatriz+" x "+nTamanioMatriz+" Realizada: "+te+" ms");
+			System.out.println("Multiplicacion "+nDigitos+" x "+nDigitos+" Realizada: "+te+" ms");
 			//Aumentamos el numero de tiempo de ejecucion
 			numeroTE++;
 		}
@@ -138,11 +140,11 @@ public class Sistema {
 
 	/**
 	 * Metodo para obtener la ruta de cada archivo de matriz segun el tamaño
-	 * @param nTamanioMatriz
+	 * @param nDigitos
 	 * @return
 	 */
-	private String obtenerRuta(int nTamanioMatriz) {
-		return "./src/matrixes_files/matriz"+nTamanioMatriz+"x"+nTamanioMatriz+".txt";
+	private String obtenerRuta(int nDigitos) {
+		return "./src/test_files/numero-"+nDigitos+"-digitos.txt";
 	}
 
 	/**

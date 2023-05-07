@@ -2,9 +2,11 @@ package model;
 
 import java.util.ArrayList;
 
+import algoritmos.MetodoAlgoritmo;
+
 public class Algoritmo {
 	private Integer numero;
-	private String nombre;
+	private MetodoAlgoritmo metodoAlgoritmo;
 	private Double mediaTE;
 	private Double rangoTE;
 	private Double desviacionEstandarTE;
@@ -12,15 +14,16 @@ public class Algoritmo {
 	private Integer numAlgoritmosAnalizados;
 	private ArrayList<TiempoEjecucion> tiemposEjecucionLst = new ArrayList<>();
 
-      ////////////////////////////////Contructor de la clase//////////////////////////////
+    ////////////////////////////////Contructor de la clase//////////////////////////////
 
-	public Algoritmo(Integer numero, String nombre) {
+
+	public Algoritmo(Integer numero, MetodoAlgoritmo metodoAlgoritmo) {
 		super();
 		this.numero = numero;
-		this.nombre = nombre;
+		this.metodoAlgoritmo = metodoAlgoritmo;
 	}
 
-      ////////////////////////////////////// sets y gets//////////////////////////////////
+    ////////////////////////////////////// sets y gets//////////////////////////////////
 
 	public Integer getNumero() {
 		return numero;
@@ -30,12 +33,20 @@ public class Algoritmo {
 		this.numero = numero;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public MetodoAlgoritmo getMetodoAlgoritmo() {
+		return metodoAlgoritmo;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setMetodoAlgoritmo(MetodoAlgoritmo metodoAlgoritmo) {
+		this.metodoAlgoritmo = metodoAlgoritmo;
+	}
+
+	public Integer getNumAlgoritmosAnalizados() {
+		return numAlgoritmosAnalizados;
+	}
+
+	public void setNumAlgoritmosAnalizados(Integer numAlgoritmosAnalizados) {
+		this.numAlgoritmosAnalizados = numAlgoritmosAnalizados;
 	}
 
 	public ArrayList<TiempoEjecucion> getTiemposEjecucionLst() {
@@ -159,8 +170,10 @@ public class Algoritmo {
 
 	@Override
 	public String toString() {
-		return "Algoritmo [numero=" + numero + ", nombre=" + nombre + ", tiemposEjecucionLst=" + tiemposEjecucionLst
-				+ "]";
+		return "Algoritmo [numero=" + numero + ", metodoAlgoritmo=" + metodoAlgoritmo + ", mediaTE=" + mediaTE
+				+ ", rangoTE=" + rangoTE + ", desviacionEstandarTE=" + desviacionEstandarTE + ", varianzaTE="
+				+ varianzaTE + ", numAlgoritmosAnalizados=" + numAlgoritmosAnalizados + ", tiemposEjecucionLst="
+				+ tiemposEjecucionLst + "]";
 	}
 
 }
