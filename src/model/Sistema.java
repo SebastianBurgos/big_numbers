@@ -1,6 +1,5 @@
 package model;
 
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 import algoritmos.AmericanoIterativo;
@@ -19,7 +18,6 @@ import algoritmos.Karatsuba;
 import algoritmos.MultiplicacionRepresentadaCadenas;
 import algoritmos.Ruso;
 import utilities.Archivos;
-import utilities.Metodos;
 
 /**
  * La clase sistema será la central para la ejecución de todos los procesos, desde

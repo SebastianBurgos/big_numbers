@@ -23,6 +23,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import model.Algoritmo;
 import model.AlgoritmoView;
 import model.TiempoEjecucion;
+import utilities.Archivos;
+import utilities.GeneracionArchivosPrueba;
 
 
 public class MainController {
@@ -84,6 +86,18 @@ public class MainController {
 
 	//Para inicializar el eje X de la grafica de Puntos TE vs Tamaños de matriz
   	private ObservableList<String> numerosTamañosMatrizX = FXCollections.observableArrayList();
+
+    @FXML
+    void generarArchivos(ActionEvent event) {
+    	GeneracionArchivosPrueba.generarArchivos();
+    	mostrarVentanaEmergente("Se han generado los archivos de prueba");
+    }
+
+    @FXML
+    void eliminarArchivos(ActionEvent event) {
+    	Archivos.EliminarArchivos();
+    	mostrarVentanaEmergente("Todos los archivos de la carpeta de archivos de prueba han sido eliminados");
+    }
 
     /**
      * Cuando se clickea el boton de ejecutar comienzan a ejecutarse hilos para cada algoritmo
@@ -224,14 +238,6 @@ public class MainController {
 		this.colTE7.setCellValueFactory(new PropertyValueFactory<>("te7"));
 		this.colN8.setCellValueFactory(new PropertyValueFactory<>("n8"));
 		this.colTE8.setCellValueFactory(new PropertyValueFactory<>("te8"));
-		this.colN9.setCellValueFactory(new PropertyValueFactory<>("n9"));
-		this.colTE9.setCellValueFactory(new PropertyValueFactory<>("te9"));
-		this.colN10.setCellValueFactory(new PropertyValueFactory<>("n10"));
-		this.colTE10.setCellValueFactory(new PropertyValueFactory<>("te10"));
-		this.colN11.setCellValueFactory(new PropertyValueFactory<>("n11"));
-		this.colTE11.setCellValueFactory(new PropertyValueFactory<>("te11"));
-		this.colN12.setCellValueFactory(new PropertyValueFactory<>("n12"));
-		this.colTE12.setCellValueFactory(new PropertyValueFactory<>("te12"));
 
 		//Para inicializar la tabla de las estadisticas
     	this.tEstadisticascolNombreAlgoritmo.setCellValueFactory(new PropertyValueFactory<>("nombre"));

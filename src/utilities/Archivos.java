@@ -2,6 +2,7 @@ package utilities;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -120,5 +121,20 @@ public class Archivos {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+
+	public static void EliminarArchivos() {
+		 // Especifica la ruta de la carpeta a eliminar los archivos
+        String rutaCarpeta = "./src/test_files/";
+        File carpeta = new File(rutaCarpeta);
+
+        // Obtiene la lista de archivos en la carpeta
+        File[] archivos = carpeta.listFiles();
+
+        // Elimina cada archivo en la carpeta
+        for (File archivo : archivos) {
+            archivo.delete();
+        }
+
 	}
 }

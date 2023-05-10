@@ -2,8 +2,8 @@ package model;
 
 public class AlgoritmoView {
 	private Algoritmo algoritmo;
-	public Integer n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12;
-	public Long te1, te2, te3, te4, te5, te6, te7, te8, te9, te10, te11, te12;
+	public Integer n1, n2, n3, n4, n5, n6, n7, n8;
+	public Long te1, te2, te3, te4, te5, te6, te7, te8;
 
 
       /////////////////////// Constructor de la clase //////////////////////////
@@ -88,38 +88,6 @@ public class AlgoritmoView {
 		this.n8 = n8;
 	}
 
-	public Integer getN9() {
-		return n9;
-	}
-
-	public void setN9(Integer n9) {
-		this.n9 = n9;
-	}
-
-	public Integer getN10() {
-		return n10;
-	}
-
-	public void setN10(Integer n10) {
-		this.n10 = n10;
-	}
-
-	public Integer getN11() {
-		return n11;
-	}
-
-	public void setN11(Integer n11) {
-		this.n11 = n11;
-	}
-
-	public Integer getN12() {
-		return n12;
-	}
-
-	public void setN12(Integer n12) {
-		this.n12 = n12;
-	}
-
 	public Long getTe1() {
 		return te1;
 	}
@@ -190,55 +158,6 @@ public class AlgoritmoView {
 		this.te8 = te8;
 	}
 
-
-
-	public Long getTe9() {
-		return te9;
-	}
-
-
-
-	public void setTe9(Long te9) {
-		this.te9 = te9;
-	}
-
-
-
-	public Long getTe10() {
-		return te10;
-	}
-
-
-
-	public void setTe10(Long te10) {
-		this.te10 = te10;
-	}
-
-
-
-	public Long getTe11() {
-		return te11;
-	}
-
-
-
-	public void setTe11(Long te11) {
-		this.te11 = te11;
-	}
-
-
-
-	public Long getTe12() {
-		return te12;
-	}
-
-
-
-	public void setTe12(Long te12) {
-		this.te12 = te12;
-	}
-
-
       /**
        * Esta metodo permite asignar los valores obtenidos del tiempo de ejecucion de los algoritmos
        * para asi poder mostrar de forma organizada uno a uno de acuerdo a la matriz implementada
@@ -269,18 +188,6 @@ public class AlgoritmoView {
 			n8 = algoritmo.getTiemposEjecucionLst().get(7).getnTamañoMatriz();
 			te8 = algoritmo.getTiemposEjecucionLst().get(7).getTiempoEjecucion();
 
-			n9 = algoritmo.getTiemposEjecucionLst().get(8).getnTamañoMatriz();
-			te9 = algoritmo.getTiemposEjecucionLst().get(8).getTiempoEjecucion();
-
-			n10 = algoritmo.getTiemposEjecucionLst().get(9).getnTamañoMatriz();
-			te10 = algoritmo.getTiemposEjecucionLst().get(9).getTiempoEjecucion();
-
-			n11 = algoritmo.getTiemposEjecucionLst().get(10).getnTamañoMatriz();
-			te11 = algoritmo.getTiemposEjecucionLst().get(10).getTiempoEjecucion();
-
-			n12 = algoritmo.getTiemposEjecucionLst().get(11).getnTamañoMatriz();
-			te12 = algoritmo.getTiemposEjecucionLst().get(11).getTiempoEjecucion();
-
 		} catch (Exception e) {
 
 		}
@@ -288,10 +195,8 @@ public class AlgoritmoView {
 
 	@Override
 	public String toString() {
-		return "AlgoritmoView [n1=" + n1 + ", n2=" + n2 + ", n3=" + n3 + ", n4=" + n4 + ", n5=" + n5 + ", n6=" + n6
-				+ ", n7=" + n7 + ", n8=" + n8 + ", n9=" + n9 + ", n10=" + n10 + ", n11=" + n11 + ", n12=" + n12
-				+ ", te1=" + te1 + ", te2=" + te2 + ", te3=" + te3 + ", te4=" + te4 + ", te5=" + te5 + ", te6=" + te6
-				+ ", te7=" + te7 + ", te8=" + te8 + ", te9=" + te9 + ", te10=" + te10 + ", te11=" + te11 + ", te12="
-				+ te12 + "] \n";
+		return "AlgoritmoView [algoritmo=" + algoritmo + ", n1=" + n1 + ", n2=" + n2 + ", n3=" + n3 + ", n4=" + n4
+				+ ", n5=" + n5 + ", n6=" + n6 + ", n7=" + n7 + ", n8=" + n8 + ", te1=" + te1 + ", te2=" + te2 + ", te3="
+				+ te3 + ", te4=" + te4 + ", te5=" + te5 + ", te6=" + te6 + ", te7=" + te7 + ", te8=" + te8 + "]";
 	}
 }
