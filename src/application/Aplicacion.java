@@ -1,6 +1,10 @@
 package application;
 /*
- * Desarrollado por Sebastian Burgos Puentes
+ * Desarrollado por:
+ *  Sebastian Burgos Puentes
+ * 	Juan Sebastian Hoyos
+ *  Juan Esteban Granda
+ *  
  */
 import java.io.IOException;
 import java.util.ArrayList;
