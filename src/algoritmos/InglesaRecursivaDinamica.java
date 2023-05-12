@@ -16,16 +16,4 @@ public class InglesaRecursivaDinamica implements MetodoAlgoritmo{
 
 	}
 
-	@Override
-	public void multiplicar(int[] arreglo1, int[] arreglo2, int[] resultado, int i, int j, int acarreo) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void multiplicar(int[] arreglo1, int[] arreglo2, int[] resultado, int i, int j, int acc, int iRes) {
-		// TODO Auto-generated method stub
-
-	}
-
 }

@@ -5,8 +5,9 @@ import java.util.ArrayList;
 public class AmericanoRecursivo implements MetodoAlgoritmo{
 
 	@Override
-	public void multiplicar(int[] arreglo1, int[] arreglo2, int[] resultado, int i, int j, int acarreo) {
-		americanoRecursivo(arreglo1, arreglo2, resultado, i, j, acarreo);
+	public void multiplicar(int[] arreglo1, int[] arreglo2) {
+		int numeroDigitosResultado = arreglo1.length + arreglo2.length;
+		americanoRecursivo(arreglo1, arreglo2, new int[numeroDigitosResultado], 0, 0, 0);
 	}
 
 	/*
@@ -46,16 +47,6 @@ public class AmericanoRecursivo implements MetodoAlgoritmo{
 
 	@Override
 	public void multiplicar(ArrayList<Integer> arreglo1, ArrayList<Integer> arreglo2) {
-	}
-
-	@Override
-	public void multiplicar(int[] arreglo1, int[] arreglo2) {
-	}
-
-	@Override
-	public void multiplicar(int[] arreglo1, int[] arreglo2, int[] resultado, int i, int j, int acc, int iRes) {
-		// TODO Auto-generated method stub
-
 	}
 
 }

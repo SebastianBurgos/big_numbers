@@ -5,8 +5,9 @@ import java.util.ArrayList;
 public class InglesaRecursiva implements MetodoAlgoritmo{
 
 	@Override
-	public void multiplicar(int[] arreglo1, int[] arreglo2, int[] resultado, int i, int j, int acc, int iRes) {
-		inglesaRecursivo(arreglo1, arreglo2, resultado, i, j, acc, iRes);
+	public void multiplicar(int[] arreglo1, int[] arreglo2) {
+		int numeroDigitosResultado = arreglo1.length + arreglo2.length;
+		inglesaRecursivo(arreglo1, arreglo2, new int[numeroDigitosResultado], 0, 0, 0, 0);
 	}
 
 	/*
@@ -56,19 +57,9 @@ public class InglesaRecursiva implements MetodoAlgoritmo{
 	}
 
 	@Override
-	public void multiplicar(int[] arreglo1, int[] arreglo2) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
 	public void multiplicar(ArrayList<Integer> arreglo1, ArrayList<Integer> arreglo2) {
 		// TODO Auto-generated method stub
 
-	}
-
-	@Override
-	public void multiplicar(int[] arreglo1, int[] arreglo2, int[] resultado, int i, int j, int acarreo) {
 	}
 
 }

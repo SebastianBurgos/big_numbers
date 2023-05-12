@@ -15,6 +15,7 @@ import algoritmos.InglesaIterativaDinamica;
 import algoritmos.InglesaRecursiva;
 import algoritmos.InglesaRecursivaDinamica;
 import algoritmos.Karatsuba;
+import algoritmos.MetodoAlgoritmo;
 import algoritmos.MultiplicacionRepresentadaCadenas;
 import algoritmos.Ruso;
 import utilities.Archivos;
@@ -84,8 +85,8 @@ public class Sistema {
 	public void ejecutarAlgoritmo (int numeroAlgoritmo) {
 		//Para refrescar tabla con valores nuevos
 		refrescarValoresUsadosTabla(numeroAlgoritmo);
-
 		int nDigitos, numeroTE = 0;
+		Long tiempoEjecucion;
 		ArrayList<TiempoEjecucion> lstTEAux = new ArrayList<>();
 
 		/**CAMBIAR i<=n para cambiar la cantidad de archivos ejecutados
@@ -95,26 +96,35 @@ public class Sistema {
 			nDigitos = (int)Math.pow(3, i);
 			String ruta = obtenerRuta(nDigitos);
 
-			//Numeros para realizar metodos estaticos
-			int[] numeroA = Archivos.leerArchivoPruebaArregloEstatico(ruta);
-			int[] numeroB = numeroA;
-
-			//Numeros apra realizar metodos dinamicos
-			ArrayList<Integer> numeroAdinamico = Archivos.leerArchivoPruebaArregloDinamico(ruta);
-			ArrayList<Integer> numeroBdinamico = numeroAdinamico;
+			//Numero para realizar metodos estaticos
+			int[] numeroEstatico = Archivos.leerArchivoPruebaArregloEstatico(ruta);
+			//Numero apra realizar metodos dinamicos
+			ArrayList<Integer> numeroDinamico = Archivos.leerArchivoPruebaArregloDinamico(ruta);
 
 			//Datos necesarios para el calculo de los tiempos de ejecucion
 			Long tiempoInicio = (long) 0;
 			Long tiempoFinal = (long) 0;
 
-			//Justo acá se calcula sólo la invocación de cada método sin
-			//ningún proceso adicional lo que no afecta al rendimiento real
-	        tiempoInicio = System.nanoTime();
+			//Los que reciben dos listas estaticas int[]
+			if (numeroAlgoritmo == 0 || numeroAlgoritmo == 4 || numeroAlgoritmo == 8 || numeroAlgoritmo == 9
+					|| numeroAlgoritmo == 2 || numeroAlgoritmo == 6) {
+				MetodoAlgoritmo metodo = algoritmosLst.get(numeroAlgoritmo).getMetodoAlgoritmo();
+				//En este momento se calcula exactamente el tiempo en nanosegundos de la invocacion
+				tiempoInicio = System.nanoTime();
+				metodo.multiplicar(numeroEstatico, numeroEstatico);
+				tiempoFinal = System.nanoTime();
+			}
+			//Los que reciben dos listas dinamicas ArrayList
+			if (numeroAlgoritmo == 1 || numeroAlgoritmo == 3) {
+				MetodoAlgoritmo metodo = algoritmosLst.get(numeroAlgoritmo).getMetodoAlgoritmo();
+				//En este momento se calcula exactamente el tiempo en nanosegundos de la invocacion
+				tiempoInicio = System.nanoTime();
+				metodo.multiplicar(numeroDinamico, numeroDinamico);
+				tiempoFinal = System.nanoTime();
+			}
 
-	        tiempoFinal = System.nanoTime();
-
-			//Se obtiene el te mediante la resta
-			Long tiempoEjecucion = tiempoFinal - tiempoInicio;
+			//Se obtiene el tiempo de ejecucion mediante la resta
+			tiempoEjecucion = tiempoFinal - tiempoInicio;
 
 			//Se crea la variable TiempoEjecucion para saber de que tamaño de matriz fue
 			//hallado ese te
