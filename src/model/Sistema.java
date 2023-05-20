@@ -61,21 +61,21 @@ public class Sistema {
       * estos nombres y se irán invocando los métodos con estos nombres
       */
 	public void crearAlgoritmos() {
-		algoritmosLst.add(new Algoritmo(1, new AmericanoIterativo()));
-		algoritmosLst.add(new Algoritmo(2, new AmericanoIterativoDinamico()));
-		algoritmosLst.add(new Algoritmo(3, new AmericanoRecursivo()));
-		algoritmosLst.add(new Algoritmo(4, new AmericanoRecursivoDinamico()));
-		algoritmosLst.add(new Algoritmo(5, new InglesaIterativa()));
-		algoritmosLst.add(new Algoritmo(6, new InglesaIterativaDinamica()));
-		algoritmosLst.add(new Algoritmo(7, new InglesaRecursiva()));
-		algoritmosLst.add(new Algoritmo(8, new InglesaRecursivaDinamica()));
-		algoritmosLst.add(new Algoritmo(9, new Ruso()));
-		algoritmosLst.add(new Algoritmo(10, new Hindu()));
-		algoritmosLst.add(new Algoritmo(11, new Egipcio()));
-		algoritmosLst.add(new Algoritmo(12, new Karatsuba()));
-		algoritmosLst.add(new Algoritmo(13, new MultiplicacionRepresentadaCadenas()));
-		algoritmosLst.add(new Algoritmo(14, new DivideVenceras1()));
-		algoritmosLst.add(new Algoritmo(15, new DivideVenceras2()));
+		algoritmosLst.add(new Algoritmo(1, new AmericanoIterativo(), "Americano Iterativo"));
+		algoritmosLst.add(new Algoritmo(2, new AmericanoIterativoDinamico(), "Americano Iterativo Dinamico"));
+		algoritmosLst.add(new Algoritmo(3, new AmericanoRecursivo(), "Americano Recursivo"));
+		algoritmosLst.add(new Algoritmo(4, new AmericanoRecursivoDinamico(), "Americano Recursivo Dinamico"));
+		algoritmosLst.add(new Algoritmo(5, new InglesaIterativa(), "Inglesa Iterativa"));
+		algoritmosLst.add(new Algoritmo(6, new InglesaIterativaDinamica(), "Inglesa Iterativa Dinamica"));
+		algoritmosLst.add(new Algoritmo(7, new InglesaRecursiva(), "Inglesa Recursiva"));
+		algoritmosLst.add(new Algoritmo(8, new InglesaRecursivaDinamica(), "Inglesa Recursiva Dinamica"));
+		algoritmosLst.add(new Algoritmo(9, new Ruso(), "Ruso"));
+		algoritmosLst.add(new Algoritmo(10, new Hindu(), "Hindu"));
+		algoritmosLst.add(new Algoritmo(11, new Egipcio(), "Egipcio"));
+		algoritmosLst.add(new Algoritmo(12, new Karatsuba(), "Karatsuba"));
+		algoritmosLst.add(new Algoritmo(13, new MultiplicacionRepresentadaCadenas(), "Multiplicacion representada por cadenas"));
+		algoritmosLst.add(new Algoritmo(14, new DivideVenceras1(), "Divide y venceras 1"));
+		algoritmosLst.add(new Algoritmo(15, new DivideVenceras2(), "Divide y venceras 2"));
 	}
 
 	/**
@@ -85,15 +85,16 @@ public class Sistema {
 	public void ejecutarAlgoritmo (int numeroAlgoritmo) {
 		//Para refrescar tabla con valores nuevos
 		refrescarValoresUsadosTabla(numeroAlgoritmo);
+		MetodoAlgoritmo metodo = algoritmosLst.get(numeroAlgoritmo).getMetodoAlgoritmo();
 		int nDigitos, numeroTE = 0;
 		Long tiempoEjecucion;
 		ArrayList<TiempoEjecucion> lstTEAux = new ArrayList<>();
 
 		/**CAMBIAR i<=n para cambiar la cantidad de archivos ejecutados
-		 * MAXIMO = i <= 10
+		 * MAXIMO = i <= 15
 		 */
-		for (int i = 3; i <= 6; i++) {
-			nDigitos = (int)Math.pow(3, i);
+		for (int i = 8; i <= 14; i++) {
+			nDigitos = (int)Math.pow(2, i);
 			String ruta = obtenerRuta(nDigitos);
 
 			//Numero para realizar metodos estaticos
@@ -108,7 +109,6 @@ public class Sistema {
 			//Los que reciben dos listas estaticas int[]
 			if (numeroAlgoritmo == 0 || numeroAlgoritmo == 4 || numeroAlgoritmo == 8 || numeroAlgoritmo == 9
 					|| numeroAlgoritmo == 2 || numeroAlgoritmo == 6) {
-				MetodoAlgoritmo metodo = algoritmosLst.get(numeroAlgoritmo).getMetodoAlgoritmo();
 				//En este momento se calcula exactamente el tiempo en nanosegundos de la invocacion
 				tiempoInicio = System.nanoTime();
 				metodo.multiplicar(numeroEstatico, numeroEstatico);
@@ -116,7 +116,6 @@ public class Sistema {
 			}
 			//Los que reciben dos listas dinamicas ArrayList
 			if (numeroAlgoritmo == 1 || numeroAlgoritmo == 3) {
-				MetodoAlgoritmo metodo = algoritmosLst.get(numeroAlgoritmo).getMetodoAlgoritmo();
 				//En este momento se calcula exactamente el tiempo en nanosegundos de la invocacion
 				tiempoInicio = System.nanoTime();
 				metodo.multiplicar(numeroDinamico, numeroDinamico);
@@ -165,8 +164,8 @@ public class Sistema {
 	private void refrescarValoresUsadosTabla(int numeroAlgoritmo) {
 		//Se mira si el numero del algoritmo vuelve a ser 0 es porque comenzo
 		//una nueva ejecución, y si el tamaño de la lista de algoritmos view ya tiene
-		//los 16 algoritmos
-		if (numeroAlgoritmo == 0 && algoritmoViewLst.size() == 16) {
+		//los 15 algoritmos
+		if (numeroAlgoritmo == 0 && algoritmoViewLst.size() == 15) {
 			algoritmosLst.get(numeroAlgoritmo).setTiemposEjecucionLst(new ArrayList<TiempoEjecucion>());;
 			algoritmoViewLst.clear();
 		}

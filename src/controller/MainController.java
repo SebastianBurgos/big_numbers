@@ -41,7 +41,7 @@ public class MainController {
 	@FXML
 	private URL location;
 
-	////////////////// PESTAÑA ANALISIS DE TIEMPOS DE EJECUCION ////////////////////
+	////////////////// PESTAï¿½A ANALISIS DE TIEMPOS DE EJECUCION ////////////////////
 
     @FXML
     private TableView<AlgoritmoView> tableTiemposEjecucion;
@@ -58,7 +58,7 @@ public class MainController {
     private TableColumn<AlgoritmoView, Long> colTE1, colTE2, colTE3, colTE4, colTE5,
     colTE6, colTE7, colTE8, colTE9, colTE10, colTE11, colTE12;
 
-    ////////////////// PESTAÑA DE ESTADÍSTICAS Y GRAFICAS ////////////////////////////
+    ////////////////// PESTAï¿½A DE ESTADï¿½STICAS Y GRAFICAS ////////////////////////////
 
     @FXML
     private BarChart<String, Long> barChartPromedios, barChartPromediosOrdenados;
@@ -84,8 +84,8 @@ public class MainController {
     //Para inicializar el eje X de la grafica de promedios de TE de algoritmos
 	private ObservableList<String> numerosEjeX = FXCollections.observableArrayList();
 
-	//Para inicializar el eje X de la grafica de Puntos TE vs Tamaños de matriz
-  	private ObservableList<String> numerosTamañosMatrizX = FXCollections.observableArrayList();
+	//Para inicializar el eje X de la grafica de Puntos TE vs Tamaï¿½os de matriz
+  	private ObservableList<String> numerosTamaniosMatrizX = FXCollections.observableArrayList();
 
     @FXML
     void generarArchivos(ActionEvent event) {
@@ -105,16 +105,16 @@ public class MainController {
      */
     @FXML
     void ejecutarAlgoritmos(ActionEvent event) {
-    	mostrarVentanaEmergente("Los resultados de la ejecución los podrá ver en unos segundos"
-    			+ "\nPor favor espere un momento y tomese una aromática");
+    	mostrarVentanaEmergente("Los resultados de la ejecucion los podra ver en unos segundos"
+    			+ "\nPor favor espere un momento");
     	//Se crea ejecuta cada algoritmo
-    	for (int i = 0; i < 16; i++) {
+    	for (int i = 0; i < 15; i++) {
     		main.ejecutarAlgoritmo(i);
     	}
-    	//Se actualiza la tabla
-    	refrescarTabla();
-    	//Se actualizan los datos para la siguiente pestaña de estadísticas
+    	//Se actualizan los datos para la siguiente pestaï¿½a de estadï¿½sticas
 		refrescarDatos();
+		//Se actualiza la tabla
+    	refrescarTabla();
 		main.calcularDatosEstadisticos();
 		inicializarTablaEstadisticas();
     }
@@ -161,7 +161,7 @@ public class MainController {
 	void graficarPromedios(){
 		barChartPromedios.getData().clear();
 		if (lstAlgoritmos.isEmpty()) {
-			mostrarVentanaEmergente("Primero ejecute los análisis en la pestaña anterior");
+			mostrarVentanaEmergente("Primero ejecute los anï¿½lisis en la pestaï¿½a anterior");
 		}else{
 
 			XYChart.Series<String, Long> series = new XYChart.Series<>();
@@ -184,7 +184,7 @@ public class MainController {
 	@FXML
 	void graficarOrdenCreciente(){
 		if (lstAlgoritmos.isEmpty()) {
-			mostrarVentanaEmergente("Primero ejecute los análisis en la pestaña anterior");
+			mostrarVentanaEmergente("Primero ejecute los anï¿½lisis en la pestaï¿½a anterior");
 		}else{
 			ArrayList<Algoritmo> lstAlgoritmosOrdenados = new ArrayList<>();
 			lstAlgoritmosOrdenados.addAll(lstAlgoritmos);
@@ -217,11 +217,11 @@ public class MainController {
 
 	/**
 	 * Se inicializan las celdas de la tabla para que se puedan usar y
-	 * se pone el nombre exacto del atributo específico de la clase AlgoritmoView
+	 * se pone el nombre exacto del atributo especï¿½fico de la clase AlgoritmoView
 	 */
 	@FXML
 	void initialize() {
-		//Para la tabla de la primera pestaña
+		//Para la tabla de la primera pestaï¿½a
 		this.colN1.setCellValueFactory(new PropertyValueFactory<>("n1"));
 		this.colTE1.setCellValueFactory(new PropertyValueFactory<>("te1"));
 		this.colN2.setCellValueFactory(new PropertyValueFactory<>("n2"));
@@ -247,18 +247,18 @@ public class MainController {
     	this.tEstadisticascolRango.setCellValueFactory(new PropertyValueFactory<>("rangoTE"));
     	this.tEstadisticascolVarianza.setCellValueFactory(new PropertyValueFactory<>("varianzaTE"));
 
-		for (int i = 1; i <= 16; i++) {
+		for (int i = 1; i <= 15; i++) {
 			numerosEjeX.add(i+"");
 		}
 		xAxisPromedios.setCategories(numerosEjeX);
 
-		for (int i = 2; i <= 13; i++) {
+		for (int i = 8; i <= 15; i++) {
 			int num = (int)Math.pow(2, i);
-			numerosTamañosMatrizX.add(num+"");
+			numerosTamaniosMatrizX.add(num+"");
 		}
-		xAxisLineChart.setCategories(numerosTamañosMatrizX);
+		xAxisLineChart.setCategories(numerosTamaniosMatrizX);
 
-		// Escucha los cambios de seleccion de elementos en la tabla de estadísticas.
+		// Escucha los cambios de seleccion de elementos en la tabla de estadï¿½sticas.
         tableEstadisticas.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> generarGraficaAlgoritmoSeleccionado(newValue));
 	}
@@ -272,7 +272,7 @@ public class MainController {
 			if (algoritmo == algoritmoSeleccionado) {
 				int i = 0;
 				for (TiempoEjecucion te : algoritmo.getTiemposEjecucionLst()) {
-					series.getData().add(new XYChart.Data<>(numerosTamañosMatrizX.get(i)+"", te.getTiempoEjecucion()));
+					series.getData().add(new XYChart.Data<>(numerosTamaniosMatrizX.get(i)+"", te.getTiempoEjecucion()));
 					i++;
 				}
 			}

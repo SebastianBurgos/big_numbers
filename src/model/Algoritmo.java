@@ -7,6 +7,7 @@ import algoritmos.MetodoAlgoritmo;
 public class Algoritmo {
 	private Integer numero;
 	private MetodoAlgoritmo metodoAlgoritmo;
+	private String nombre;
 	private Double mediaTE;
 	private Double rangoTE;
 	private Double desviacionEstandarTE;
@@ -17,10 +18,11 @@ public class Algoritmo {
     ////////////////////////////////Contructor de la clase//////////////////////////////
 
 
-	public Algoritmo(Integer numero, MetodoAlgoritmo metodoAlgoritmo) {
+	public Algoritmo(Integer numero, MetodoAlgoritmo metodoAlgoritmo, String nombre) {
 		super();
 		this.numero = numero;
 		this.metodoAlgoritmo = metodoAlgoritmo;
+		this.nombre = nombre;
 	}
 
     ////////////////////////////////////// sets y gets//////////////////////////////////
@@ -87,6 +89,14 @@ public class Algoritmo {
 
 	public void setVarianzaTE(Double varianzaTE) {
 		this.varianzaTE = varianzaTE;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
 	public void calcularDatosEstadisticos() {

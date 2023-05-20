@@ -1,26 +1,26 @@
 package model;
 
 public class TiempoEjecucion {
-	private Integer nTamañoMatriz;
+	private Integer nTamanioMatriz;
 	private Long tiempoEjecucion;
 
 
       //////////////////////// Constructor de la clase //////////////////////
 
-	public TiempoEjecucion(Integer nTamañoMatriz, Long tiempoEjecucion) {
+	public TiempoEjecucion(Integer nTamanioMatriz, Long tiempoEjecucion) {
 		super();
-		this.nTamañoMatriz = nTamañoMatriz;
+		this.nTamanioMatriz = nTamanioMatriz;
 		this.tiempoEjecucion = tiempoEjecucion;
 	}
 
       ///////////////////////// gets y sets /////////////////////////////////
 
-	public Integer getnTamañoMatriz() {
-		return nTamañoMatriz;
+	public Integer getnTamanioMatriz() {
+		return nTamanioMatriz;
 	}
 
-	public void setnTamañoMatriz(Integer nTamañoMatriz) {
-		this.nTamañoMatriz = nTamañoMatriz;
+	public void setnTamanioMatriz(Integer nTamanioMatriz) {
+		this.nTamanioMatriz = nTamanioMatriz;
 	}
 
 	public Long getTiempoEjecucion() {
@@ -33,6 +33,6 @@ public class TiempoEjecucion {
 
 	@Override
 	public String toString() {
-		return "TiempoEjecucion [nTamañoMatriz=" + nTamañoMatriz + ", tiempoEjecucion=" + tiempoEjecucion + "]";
+		return "TiempoEjecucion [nTamanioMatriz=" + nTamanioMatriz + ", tiempoEjecucion=" + tiempoEjecucion + "]";
 	}
 }

@@ -27,18 +27,17 @@ public class Archivos {
 			numero = new int[longitud];
 			// Las siguientes lineas son el numero
 			linea = br.readLine();
-			while (linea != null) {
-				/*
-				 * Tenemos todos los enteros JUNTOS en el String linea. Con
-				 * split() los SEPARAMOS en un array donde cada entero es un
-				 * String individual. Con un bucle, los parseamos a Integer para
-				 * guardarlos en el numero
-				 */
-				String[] digitos = linea.split(" ");
-				for (int i = 0; i < digitos.length; i++)
-					numero[i] = Integer.parseInt(digitos[i]);
-
+			/*
+			 * Tenemos todos los enteros JUNTOS en el String linea. Con
+			 * split() los SEPARAMOS en un array donde cada entero es un
+			 * String individual. Con un bucle, los parseamos a Integer para
+			 * guardarlos en el numero
+			 */
+			String[] digitos = linea.split(" ");
+			for (int i = 0; i < digitos.length; i++){
+				numero[i] = Integer.parseInt(digitos[i]);
 			}
+
 			br.close(); // Cerramos el lector de ficheros
 
 		} catch (FileNotFoundException e) {
@@ -68,19 +67,16 @@ public class Archivos {
 			String linea = br.readLine();
 			// Las siguientes lineas son el numero
 			linea = br.readLine();
-			while (linea != null) {
-				/*
-				 * Tenemos todos los enteros JUNTOS en el String linea. Con
-				 * split() los SEPARAMOS en un array donde cada entero es un
-				 * String individual. Con un bucle, los parseamos a Integer para
-				 * guardarlos en el numero
-				 */
-				String[] digitos = linea.split(" ");
-				for (int i = 0; i < digitos.length; i++){
-					int digito = Integer.parseInt(digitos[i]);
-					numero.add(digito);
-				}
-
+			/*
+			 * Tenemos todos los enteros JUNTOS en el String linea. Con
+			 * split() los SEPARAMOS en un array donde cada entero es un
+			 * String individual. Con un bucle, los parseamos a Integer para
+			 * guardarlos en el numero
+			 */
+			String[] digitos = linea.split(" ");
+			for (int i = 0; i < digitos.length; i++){
+				int digito = Integer.parseInt(digitos[i]);
+				numero.add(digito);
 			}
 			br.close(); // Cerramos el lector de ficheros
 

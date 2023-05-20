@@ -6,19 +6,19 @@ public class AmericanoIterativoDinamico implements MetodoAlgoritmo{
 
 	@Override
 	public void multiplicar(ArrayList<Integer> arreglo1, ArrayList<Integer> arreglo2) {
-		americanaIterativaList(arreglo1, arreglo2);
+		ArrayList<Integer> resultado = new ArrayList<>();
+		//Esta linea se hace para llenar el arraylist con 0's de acuerdo al tamaño
+		resultado = llenarArray(resultado, arreglo1.size()+arreglo2.size());
+		americanaIterativaList(arreglo1, arreglo2, resultado);
 	}
 
 	/*
 	 * Este metodo realiza una multiplicación americana de forma iterativa con arraylist
 	 *
 	 * */
-	public static ArrayList<Integer> americanaIterativaList(ArrayList<Integer> arreglo1, ArrayList<Integer> arreglo2) {
+	public static ArrayList<Integer> americanaIterativaList(ArrayList<Integer> arreglo1, ArrayList<Integer> arreglo2,
+			ArrayList<Integer> resultado) {
 
-
-		ArrayList<Integer> resultado = new ArrayList<>();
-		//Esta linea se hace para llenar el arraylist con 0's de acuerdo al tamaño
-		resultado = llenarArray(resultado, arreglo1.size()+arreglo2.size());
 		//En esta variable se guarda el acarreo en caso de que haya
 		int acarreo = 0;
 	    int result;
